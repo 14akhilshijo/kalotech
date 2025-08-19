@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background: #FFFFFF;
+    color: #1E293B;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #0F172A;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-teal via-cyan to-indigo text-white font-semibold py-4 px-8 rounded-2xl shadow-2xl hover:shadow-3xl hover:shadow-teal/50 transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 relative overflow-hidden;
+  }
+  
+  .btn-primary.group {
+    /* group utility is applied via className in components */
+  }
+  
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-teal text-teal font-semibold py-4 px-8 rounded-2xl hover:bg-teal hover:text-white hover:shadow-xl transform hover:scale-105 transition-all duration-500 backdrop-blur-sm;
+  }
+  
+  .btn-accent {
+    @apply bg-gradient-to-r from-orange via-amber to-yellow-500 text-white font-bold py-4 px-8 rounded-2xl shadow-2xl hover:shadow-3xl hover:shadow-orange/50 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500;
+  }
+  
+  .card {
+    @apply bg-white rounded-3xl shadow-2xl hover:shadow-3xl hover:shadow-teal/20 transform hover:scale-105 transition-all duration-500 border border-gray-200 hover:border-teal;
+  }
+  
+  .card-hover {
+    @apply bg-white rounded-3xl shadow-2xl hover:shadow-3xl hover:shadow-teal/30 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 border border-gray-200 hover:border-teal;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50;
+  }
+  
+  .gradient-tech {
+    @apply bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50;
+  }
+  
+  .gradient-mesh {
+    @apply bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50;
+  }
+  
+  .floating-shape {
+    @apply absolute rounded-full opacity-10 animate-float;
+  }
+  
+  .floating-shape-slow {
+    @apply absolute rounded-full opacity-10 animate-float-slow;
+  }
+  
+  .morph-shape {
+    @apply absolute animate-morph opacity-10;
+  }
+  
+  .glass-effect {
+    @apply bg-white/90 backdrop-blur-xl border border-gray-200 shadow-lg;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-teal via-cyan to-indigo bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-warm {
+    @apply bg-gradient-to-r from-orange via-amber to-yellow-500 bg-clip-text text-transparent;
+  }
+  
+  .shimmer-effect {
+    @apply bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer;
+    background-size: 200% 100%;
+  }
+  
+  .glow-effect {
+    @apply animate-glow;
+  }
+  
+  .wave-effect {
+    @apply animate-wave;
+  }
+  
+  .bounce-gentle {
+    @apply animate-bounce-gentle;
+  }
+  
+  .pulse-gentle {
+    @apply animate-pulse-gentle;
+  }
+  
+  .rotate-slow {
+    @apply animate-rotate-slow;
+  }
+  
+  .gradient-x {
+    @apply animate-gradient-x;
+  }
+  
+  .gradient-y {
+    @apply animate-gradient-y;
+  }
+  
+  .gradient-xy {
+    @apply animate-gradient-xy;
+  }
+  
+  .tech-card {
+    @apply bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-8 border border-gray-200 hover:border-teal transition-all duration-500 hover:shadow-2xl hover:shadow-teal/20;
+  }
+  
+  .input-field {
+    @apply w-full px-6 py-4 bg-white border border-gray-300 rounded-2xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent transition-all duration-300 hover:border-teal focus:shadow-lg focus:shadow-teal/20;
+  }
+  
+  .nav-link {
+    @apply relative text-white/90 hover:text-white px-4 py-2 text-sm font-medium transition-all duration-300;
+  }
+  
+  .nav-link.group {
+    /* group utility is applied via className in components */
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal to-cyan transition-all duration-500 group-hover:w-full;
+  }
+  
+  .section-padding {
+    @apply py-24;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .heading-xl {
+    @apply text-5xl lg:text-7xl font-bold leading-tight;
+  }
+  
+  .heading-lg {
+    @apply text-4xl lg:text-6xl font-bold leading-tight;
+  }
+  
+  .heading-md {
+    @apply text-3xl lg:text-5xl font-bold leading-tight;
+  }
+  
+  .text-body {
+    @apply text-lg lg:text-xl text-gray-700 leading-relaxed;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-teal to-cyan text-white font-medium text-sm border border-teal;
+  }
+  
+  .badge-accent {
+    @apply inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange to-amber text-white font-medium text-sm border border-orange;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .backdrop-blur-xs {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
+}
